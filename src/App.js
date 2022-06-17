@@ -1,4 +1,5 @@
 import React from "react";
+import axios from 'axios';
 import "./App.css";
 
 const YELP_BASE_URL = 'https://api.yelp.com/v3/';
@@ -21,13 +22,13 @@ class App extends React.Component {
   // ComponentDidMount is used to
   // execute the code
   componentDidMount() {
-    fetch(`https://api.yelp.com/v3/businesses/search?location=95742`, 
+    axios.get(`https://cryptic-headland-94862.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=95742`, 
     {
       method: 'GET',
-      mode: "no-cors",
+      // mode: "no-cors",
       headers: {
         Authorization: `Bearer ${YELP_TOKEN}`, 
-        Origin: 'localhost',
+        // Origin: 'localhost',
         withCredentials: true, 
       }, 
       // params: {
