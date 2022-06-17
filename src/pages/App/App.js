@@ -1,9 +1,11 @@
-import './App.css';
-import {useState} from "react";
+import React from 'react';
+import { useState } from "react";
 import AuthPage from "../AuthPage/AuthPage";
-import {Route, Switch, Redirect} from "react-router-dom";
-import { getUser } from '../../utilities/users-service';
+import { Route, Switch, Redirect } from "react-router-dom";
+import { getUser } from '../../utilities/services/users-service'; 
 import NavBar from "../../components/NavBar/NavBar";
+import './App.css';
+
 
 export default function App() {
     const [user, setUser] = useState(getUser());
