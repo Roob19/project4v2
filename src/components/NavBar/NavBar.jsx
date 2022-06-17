@@ -8,13 +8,25 @@ export default function NavBar(props) {
         props.setUser(null);
     }
 
-    return (<nav>
-        <Link to="/orders">Order History</Link>
-        &nbsp; | &nbsp;
-        <Link to="/orders/new">New Order</Link>
-        &nbsp; | &nbsp;
-        <span>Welcome {props.user.name}</span>
-        &nbsp; | &nbsp;
-        <Link to="" onClick={handleLogOut}>Logout</Link>
-    </nav>);
+    return (
+        <nav>
+            <Link to="/BarCrawls">Bar Crawls</Link>
+            &nbsp; | &nbsp;
+            <Link to="/BottleShops">Bottle Shops</Link>
+            &nbsp; | &nbsp;
+            <Link to="/BeerBars">Beer Bars</Link>
+            &nbsp; | &nbsp;
+            <Link to="/BeerGardens">Beer Gardens</Link>
+            &nbsp; | &nbsp;
+            <Link to="/BeerTours">Beer Tours</Link>
+            &nbsp; | &nbsp;
+            <Link to="/Events">Food & Drink Events</Link>
+            &nbsp; | &nbsp;
+            <Link to="/HotNew">Hot & New</Link>
+            &nbsp; | &nbsp;
+            { props.user ? <span>Welcome {props.user.name}</span> : '' }
+            &nbsp; | &nbsp;
+            <Link to="" onClick={ handleLogOut }>Logout</Link>
+        </nav>
+    );
 }

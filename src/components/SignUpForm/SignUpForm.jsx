@@ -13,7 +13,7 @@ export default function NavBar(props) {
         &nbsp; | &nbsp;
         <Link to="/orders/new">New Order</Link>
         &nbsp; | &nbsp;
-        <span>Welcome {props.user.name}</span>
+        {/* <span>Welcome {props.user.name}</span> */}
         &nbsp; | &nbsp;
         <Link to="" onClick={handleLogOut}>Logout</Link>
     </nav>);
