@@ -6,6 +6,13 @@ import { getUser } from '../../utilities/services/users-service';
 import NavBar from "../../components/NavBar/NavBar";
 import AgeCheck from '../LegalAgePage/LegalAgePage';
 import { HomePage } from '../HomePage/HomePage';
+import { barCrawlData } from '../../utilities/seeds/barCrawls';
+import { beerBarsData } from '../../utilities/seeds/beerbars';
+import { beerGardensData } from '../../utilities/seeds/beergardens';
+import { beerToursData } from '../../utilities/seeds/beertours';
+import { bottleShopData } from '../../utilities/seeds/bottleShops';
+import { eventsData } from '../../utilities/seeds/events';
+import { hotNewData } from '../../utilities/seeds/hotNew';
 import './App.css';
 
 
@@ -19,7 +26,7 @@ export default function App() {
                         <HomePage user={user} setUser={setUser} />
                     </Route>
                     <Route path="/BarCrawls">
-                        {/* <BarCrawlsPage /> */}
+                        {/* <BusinessIndex business={barCrawlData} /> */}
                     </Route>
                     <Route path="/BottleShops">
                         {/* <BottleShopsPage /> */}
