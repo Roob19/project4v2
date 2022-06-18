@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import agegate, { getData } from 'agegate';
-import { useNavigate } from 'react-router-dom';
 
 const countries = getData();
 
@@ -8,7 +7,6 @@ export default function AgeCheck() {
     const [date, setDate] = useState("");
     const [country, setCountry] = useState(countries[0].code);
     const [legal, setLegal] = useState(false);
-    const navigate = useNavigate();
     
     const submitHandler = e => {
         e.preventDefault();
@@ -17,7 +15,6 @@ export default function AgeCheck() {
             const result = agegate(new Date(date), country);
             setLegal(result);
         }
-        navigate('/home');
     };
     
     return (

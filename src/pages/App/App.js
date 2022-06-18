@@ -4,9 +4,9 @@ import { Route, Routes, Switch, Redirect } from "react-router-dom";
 import { getUser } from '../../utilities/services/users-service'; 
 
 import { barCrawlData } from '../../utilities/seeds/barCrawls';
-import { beerBarsData } from '../../utilities/seeds/beerbars';
-import { beerGardensData } from '../../utilities/seeds/beergardens';
-import { beerToursData } from '../../utilities/seeds/beertours';
+import { beerBarsData } from '../../utilities/seeds/beerBars';
+import { beerGardensData } from '../../utilities/seeds/beerGardens';
+import { beerToursData } from '../../utilities/seeds/beerTours';
 import { bottleShopData } from '../../utilities/seeds/bottleShops';
 import { eventsData } from '../../utilities/seeds/events';
 import { hotNewData } from '../../utilities/seeds/hotNew';
