@@ -1,9 +1,11 @@
 import { Component } from "react";
+import { useNavigate } from "react-router-dom";
 import { signUp } from "../../utilities/services/users-service";
 
 export default class SignUpForm extends Component {
     state = {
         name: "",
+        dob: '',
         email: "",
         password: "",
         confirm: "",
@@ -20,15 +22,17 @@ export default class SignUpForm extends Component {
     handleSubmit = async (evt) => {
         evt.preventDefault();
         // alert(JSON.stringify(this.state));
+        const navigate = useNavigate();
         try {
-        const formData = { ...this.state };
-        delete formData.error;
-        delete formData.confirm;
-        const user = await signUp(formData);
-        this.props.setUser(user);
-        console.log(user);
+            const formData = { ...this.state };
+            delete formData.error;
+            delete formData.confirm;
+            const user = await signUp(formData);
+            this.props.setUser(user);
+            console.log(user);
+            navigate('/home');
         } catch {
-        this.setState({ error: "Sign Up Failed - Try Again" });
+            this.setState({ error: "Sign Up Failed - Try Again" });
         }
     };
 
@@ -44,6 +48,15 @@ export default class SignUpForm extends Component {
                 name="name"
                 value={this.state.name}
                 onChange={this.handleChange}
+                required
+                />
+                <label>Date of Birth</label>
+                <input 
+                type="date"
+                name="dob"
+                value={this.state.dob}
+                onChange={this.handleChange}
+                placeholder="YYYY-MM-DD"
                 required
                 />
                 <label>Email</label>

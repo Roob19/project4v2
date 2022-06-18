@@ -4,6 +4,8 @@ import AuthPage from "../AuthPage/AuthPage";
 import { Route, Routes, Switch, Redirect } from "react-router-dom";
 import { getUser } from '../../utilities/services/users-service'; 
 import NavBar from "../../components/NavBar/NavBar";
+import AgeCheck from '../LegalAgePage/LegalAgePage';
+import { HomePage } from '../HomePage/HomePage';
 import './App.css';
 
 
@@ -13,6 +15,9 @@ export default function App() {
             {user ? <>
                 <NavBar user={user} setUser={setUser}/>
                 <Routes>
+                    <Route path="/home">
+                        <HomePage user={user} setUser={setUser} />
+                    </Route>
                     <Route path="/BarCrawls">
                         {/* <BarCrawlsPage /> */}
                     </Route>
@@ -34,8 +39,11 @@ export default function App() {
                     <Route path="/HotNew">
                         {/* <HotNewPage /> */}
                     </Route>
-                    {/* <Redirect to="/"/> */}
+                    {/* <Redirect to="/home" /> */}
                 </Routes>
-            </> : <AuthPage setUser={setUser}/>}
+            </> 
+            : <AuthPage setUser={setUser}/>
+            // : <AgeCheck />
+            }
         </main>);
 }
