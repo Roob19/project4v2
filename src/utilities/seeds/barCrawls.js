@@ -1,3 +1,9 @@
+// require('dotenv').config();
+// require('../../../config/database');
+
+// const Business = require('../../../models/business');
+
+
 // https://api.yelp.com/v3/businesses/search?location=95742&radius=39999&categories=barcrawl&sort_by=rating
 
 export const barCrawlData = [

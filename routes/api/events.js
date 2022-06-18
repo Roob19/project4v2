@@ -9,3 +9,4 @@ router.get('/', eventsCtrl.index);
 router.get('/:id', eventsCtrl.show);
 
 module.exports = router;
+
