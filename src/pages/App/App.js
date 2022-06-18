@@ -11,8 +11,8 @@ import { bottleShopData } from '../../utilities/seeds/bottleShops';
 import { eventsData } from '../../utilities/seeds/events';
 import { hotNewData } from '../../utilities/seeds/hotNew';
 
-import AgeCheck from '../LegalAgePage/LegalAgePage';
-// import AuthPage from "../AuthPage/AuthPage";
+// import AgeCheck from '../LegalAgePage/LegalAgePage';
+import AuthPage from "../AuthPage/AuthPage";
 import NavBar from "../../components/NavBar/NavBar";
 import { HomePage } from '../HomePage/HomePage';
 import { BusinessIndex } from '../BusinessIndex/BusinessIndex';
@@ -23,12 +23,13 @@ import './App.css';
 export default function App() {
     const [user, setUser] = useState(getUser());
     return (<main className="App">
-            {user ? <>
+            {/* {user ?  */}
+            <>
                 <NavBar user={user} setUser={setUser}/>
                 <Routes>
-                    <Route path="/home">
+                    {/* <Route path="/home">
                         <HomePage user={user} setUser={setUser} />
-                    </Route>
+                    </Route> */}
                     <Route path="/BarCrawls">
                         <BusinessIndex business={barCrawlData} />
                     </Route>
@@ -53,7 +54,8 @@ export default function App() {
                     {/* <Redirect to="/home" /> */}
                 </Routes>
             </> 
-            : <AgeCheck /> 
-            }
+            {/* : <AgeCheck />  */}
+            {/* : <AuthPage setUser={setUser}/> */}
+            {/* } */}
         </main>);
 }

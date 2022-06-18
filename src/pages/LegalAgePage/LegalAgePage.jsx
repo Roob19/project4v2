@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import agegate, { getData } from 'agegate';
 import { getUser } from '../../utilities/services/users-service'; 
 import AuthPage from "../AuthPage/AuthPage";
+import { Route } from 'react-router';
 
 const countries = getData();
 
@@ -17,13 +18,18 @@ export default function AgeCheck() {
         if (date && country) {
             const result = agegate(new Date(date), country);
             setLegal(result);
+            if (legal) {
+                return (
+                    <>
+                        <AuthPage setUser={setUser}/>
+                    </>
+                    );
+            }
         }
     };
     
     return (
         <div>
-            {legal ? <AuthPage setUser={setUser}/> 
-            : 
             <form onSubmit={submitHandler}>
                 <h3>Enter your date of birth</h3>
                 <input
@@ -44,7 +50,7 @@ export default function AgeCheck() {
         
                 <button type="submit">Submit</button>
             </form>
-            }
+            
             <p style={{ color: legal ? "green" : "red" }}>
                 RESULT: You are {legal ? "" : "NOT"} old enough!
             </p>
