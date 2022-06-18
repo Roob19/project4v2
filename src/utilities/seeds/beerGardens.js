@@ -1,6 +1,6 @@
 // https://api.yelp.com/v3/businesses/search?location=95742&radius=39999&categories=beergardens&sort_by=rating
 
-export const beerGardensData = [
+const beerGardensData = [
   {
     id: "7eyOUHlgLiXfUyNcqqwx2w",
     alias: "sacyard-community-tap-house-sacramento-2",
@@ -453,3 +453,7 @@ export const beerGardensData = [
     distance: 24479.993165905897,
   },
 ];
+
+module.exports = {
+  beerGardensData,
+}

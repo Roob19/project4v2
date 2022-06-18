@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import * as userService from '../../utilities/services/users-service';
 
 export default function NavBar(props) {

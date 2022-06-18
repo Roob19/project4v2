@@ -1,6 +1,6 @@
 // https://api.yelp.com/v3/businesses/search?location=95742&radius=39999&categories=beer_and_wine&sort_by=rating
 
-export const bottleShopData = [
+const bottleShopData = [
   {
     id: "dwZ8c-WzcvpsbKCidWo92g",
     alias: "pacific-market-sacramento",
@@ -807,3 +807,7 @@ export const bottleShopData = [
     distance: 16902.606318877242,
   },
 ];
+
+module.exports = {
+  bottleShopData,
+}

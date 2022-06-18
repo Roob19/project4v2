@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 
-const BusinessCard = (business, idx) => {
+const BusinessCard = ({business, idx}) => {
     return (
         <div className="business-card">
-            <Link to={`/business/${business.name}`} />
+            <Link to={`/business/${business.id}`} />
             <h1>{business.name}</h1>
             <img src={business.image_url} alt={business.alias} />
             <p>Rating: {business.rating}</p>

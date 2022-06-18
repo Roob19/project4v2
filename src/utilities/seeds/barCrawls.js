@@ -1,6 +1,6 @@
 // https://api.yelp.com/v3/businesses/search?location=95742&radius=39999&categories=barcrawl&sort_by=rating
 
-export const barCrawlData = [
+const barCrawlData = [
   {
     id: "Li-qWlIITGUa8LN-_fsqiw",
     alias: "bar-crawl-nation-sacramento",
@@ -36,3 +36,7 @@ export const barCrawlData = [
     distance: 24597.96445747545,
   },
 ];
+
+module.exports = {
+  barCrawlData,
+}
