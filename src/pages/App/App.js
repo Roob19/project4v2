@@ -1,11 +1,8 @@
 import React from 'react';
 import { useState } from "react";
-import AuthPage from "../AuthPage/AuthPage";
 import { Route, Routes, Switch, Redirect } from "react-router-dom";
 import { getUser } from '../../utilities/services/users-service'; 
-import NavBar from "../../components/NavBar/NavBar";
-import AgeCheck from '../LegalAgePage/LegalAgePage';
-import { HomePage } from '../HomePage/HomePage';
+
 import { barCrawlData } from '../../utilities/seeds/barCrawls';
 import { beerBarsData } from '../../utilities/seeds/beerbars';
 import { beerGardensData } from '../../utilities/seeds/beergardens';
@@ -13,6 +10,15 @@ import { beerToursData } from '../../utilities/seeds/beertours';
 import { bottleShopData } from '../../utilities/seeds/bottleShops';
 import { eventsData } from '../../utilities/seeds/events';
 import { hotNewData } from '../../utilities/seeds/hotNew';
+
+import AgeCheck from '../LegalAgePage/LegalAgePage';
+import AuthPage from "../AuthPage/AuthPage";
+import NavBar from "../../components/NavBar/NavBar";
+import { HomePage } from '../HomePage/HomePage';
+import { BusinessIndex } from '../BusinessIndex/BusinessIndex';
+import { BusinessDetails } from '../BusinessDetails/BusinessDetails';
+import { EventIndex } from '../EventIndex/EventIndex';
+import { EventDetails } from '../EventDetails/EventDetails';
 import './App.css';
 
 
@@ -26,25 +32,25 @@ export default function App() {
                         <HomePage user={user} setUser={setUser} />
                     </Route>
                     <Route path="/BarCrawls">
-                        {/* <BusinessIndex business={barCrawlData} /> */}
+                        <BusinessIndex business={barCrawlData} />
                     </Route>
                     <Route path="/BottleShops">
-                        {/* <BottleShopsPage /> */}
+                        <BusinessIndex business={bottleShopData} />
                     </Route>
                     <Route path="/BeerBars">
-                        {/* <BeerBarsPage /> */}
+                        <BusinessIndex business={beerBarsData} />
                     </Route>
                     <Route path="/BeerGardens">
-                        {/* <BeerGardensPage /> */}
+                        <BusinessIndex business={beerGardensData} />
                     </Route>
                     <Route path="/BeerTours">
-                        {/* <BeerToursPage /> */}
+                        <BusinessIndex business={beerToursData} />
                     </Route>
                     <Route path="/Events">
-                        {/* <eventsPage /> */}
+                        <EventIndex event={eventsData} />
                     </Route>
                     <Route path="/HotNew">
-                        {/* <HotNewPage /> */}
+                        <BusinessIndex business={hotNewData} />
                     </Route>
                     {/* <Redirect to="/home" /> */}
                 </Routes>
