@@ -3,6 +3,7 @@ const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
 const cors = require('cors');
+const ensureLoggedIn = require('./config/ensureLoggedIn');
 
 require('dotenv').config();
 require('./config/database');
@@ -25,7 +26,6 @@ app.use(require('./config/checkToken'));
 
 app.use('/api/users', require('./routes/api/users'));
 
-const ensureLoggedIn = require('./config/ensureLoggedIn');
 app.use('/api/business', ensureLoggedIn, require('./routes/api/businesses'));
 app.use('/api/events', ensureLoggedIn, require('./routes/api/events'));
 

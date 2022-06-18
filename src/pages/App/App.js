@@ -12,7 +12,7 @@ import { eventsData } from '../../utilities/seeds/events';
 import { hotNewData } from '../../utilities/seeds/hotNew';
 
 import AgeCheck from '../LegalAgePage/LegalAgePage';
-import AuthPage from "../AuthPage/AuthPage";
+// import AuthPage from "../AuthPage/AuthPage";
 import NavBar from "../../components/NavBar/NavBar";
 import { HomePage } from '../HomePage/HomePage';
 import { BusinessIndex } from '../BusinessIndex/BusinessIndex';
@@ -53,8 +53,7 @@ export default function App() {
                     {/* <Redirect to="/home" /> */}
                 </Routes>
             </> 
-            : <AuthPage setUser={setUser}/>
-            // : <AgeCheck />
+            : <AgeCheck /> 
             }
         </main>);
 }
