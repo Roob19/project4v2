@@ -1,11 +1,10 @@
-import React from 'react';
 import axios from 'axios';
 
 const YELP_TOKEN = process.env.REACT_APP_YELP_TOKEN;
 
-const YELP_BASE_URL = 'https://api.yelp.com/v3/';
+// const YELP_BASE_URL = 'https://api.yelp.com/v3/';
 const YELP_BIZ_URL = 'https://api.yelp.com/v3/businesses/search';
-const YELP_EVT_URL = 'https://api.yelp.com/v3/events';
+// const YELP_EVT_URL = 'https://api.yelp.com/v3/events';
 
 
 const getYelp = () => {

@@ -9,6 +9,7 @@
     "agegate": "^4.0.1",
     "axios": "^0.27.2",
     "bcrypt": "^5.0.1",
+    "bootstrap": "^5.1.3",
     "cors": "^2.8.5",
     "express": "^4.18.1",
     "fetch": "^1.1.0",

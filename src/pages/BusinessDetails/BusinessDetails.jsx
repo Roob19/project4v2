@@ -1,8 +1,7 @@
 import React from 'react';
-import { useParams } from 'react-router';
 
 const BusinessDetails = ({business}) => {
-    
+
     return (
         <div className="business-details">
             <h1>{business.name}</h1>

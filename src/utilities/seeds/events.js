@@ -1,6 +1,6 @@
 // https://api.yelp.com/v3/events?location=95742&radius=39999&categories=food-and-drink
 
-const eventsData = [
+export const eventsData = [
   {
     attending_count: 200,
     category: "food-and-drink",
@@ -107,7 +107,3 @@ const eventsData = [
     business_id: "yolo-county-west-sacramento",
   },
 ];
-
-module.exports = {
-  eventsData,
-}

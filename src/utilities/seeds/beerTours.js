@@ -1,6 +1,6 @@
 // https://api.yelp.com/v3/businesses/search?location=95742&radius=39999&categories=beertours&sort_by=rating
 
-const beerToursData = [
+export const beerToursData = [
   {
     id: "8vNjE8hgMTq6fOZ4sc8lDQ",
     alias: "sactown-social-bikes-sacramento",
@@ -218,7 +218,3 @@ const beerToursData = [
     distance: 113255.61202229481,
   },
 ];
-
-module.exports = {
-  beerToursData,
-}

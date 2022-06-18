@@ -1,6 +1,6 @@
 // https://api.yelp.com/v3/businesses/search?location=95742&radius=39999&categories=beerbar&sort_by=rating
 
-const beerBarsData = [
+export const beerBarsData = [
   {
     id: "-dANAEth6XwSxSOMNoJuqA",
     alias: "sac-brew-bike-sacramento-3",
@@ -853,7 +853,3 @@ const beerBarsData = [
     distance: 18293.636814276324,
   },
 ];
-
-module.exports = {
-  beerBarsData,
-}

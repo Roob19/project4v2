@@ -16,9 +16,7 @@ import AuthPage from "../AuthPage/AuthPage";
 import NavBar from "../../components/NavBar/NavBar";
 import { HomePage } from '../HomePage/HomePage';
 import { BusinessIndex } from '../BusinessIndex/BusinessIndex';
-import { BusinessDetails } from '../BusinessDetails/BusinessDetails';
 import { EventIndex } from '../EventIndex/EventIndex';
-import { EventDetails } from '../EventDetails/EventDetails';
 import './App.css';
 
 

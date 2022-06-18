@@ -1,6 +1,6 @@
 // https://api.yelp.com/v3/businesses/search?location=95742&radius=39999&term=beer&attributes=hot_and_new
 
-const hotNewData = [
+export const hotNewData = [
   {
     id: "3939P75ImKkRsNsWVNFxzw",
     alias: "camerado-brewing-cameron-park",
@@ -279,7 +279,3 @@ const hotNewData = [
     distance: 26113.135798992178,
   },
 ];
-
-module.exports = {
-  hotNewData,
-}
