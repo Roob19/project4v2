@@ -1,0 +1,14 @@
+h1 {
+    background-color: #fdac61;
+    color: #808c6c;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+button {
+    align-self: center;
+    background-color: #808c6c;
+    color: #f5f1da;
+    margin: 21px auto;
+    padding: .3rem 2rem .3rem 2rem;
+}

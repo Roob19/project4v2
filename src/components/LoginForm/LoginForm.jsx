@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import * as usersService from '../../utilities/services/users-service';
 import { Button, Form, Card } from 'react-bootstrap';
+import './LoginForm.css';
 
 export default function LogIn({setUser}) {
     const [credentials, setCredentials] = useState({

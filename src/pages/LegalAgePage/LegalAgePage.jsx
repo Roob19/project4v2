@@ -3,6 +3,7 @@ import agegate, { getData } from 'agegate';
 import { getUser } from '../../utilities/services/users-service'; 
 import AuthPage from "../AuthPage/AuthPage";
 import { Route } from 'react-router';
+import './LegalAgePage.css';
 
 const countries = getData();
 
@@ -40,7 +41,11 @@ export default function AgeCheck() {
                 />
         
                 <h3>Enter your country</h3>
-                <select value={country} onChange={e => setCountry(e.target.value)}>
+                <select 
+                    value={country} 
+                    onChange={e => setCountry(e.target.value)} 
+                    defaultValue="United States"
+                >
                 {countries.map(({ code, name }) => (
                     <option key={name} value={code}>
                     {name}

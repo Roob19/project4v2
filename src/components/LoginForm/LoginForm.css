@@ -1,0 +1,21 @@
+.login-card {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    margin: 0% 15% 0% 15%;
+    background-color: #f5f1da;
+    color: #808c6c;
+}
+
+Form.Label, 
+Form.Control {
+    align-self: center;
+    color: #808c6c;
+    background-color: #fdac61;
+
+}
+
+Button {
+    background-color: #808c6c;
+    color: #f5f1da;
+}
