@@ -11,7 +11,7 @@ import { bottleShopData } from '../../utilities/seeds/bottleShops';
 import { eventsData } from '../../utilities/seeds/events';
 import { hotNewData } from '../../utilities/seeds/hotNew';
 
-// import AgeCheck from '../LegalAgePage/LegalAgePage';
+import AgeCheck from '../LegalAgePage/LegalAgePage';
 import AuthPage from "../AuthPage/AuthPage";
 import NavBar from "../../components/NavBar/NavBar";
 import { HomePage } from '../HomePage/HomePage';
@@ -23,7 +23,7 @@ import './App.css';
 export default function App() {
     const [user, setUser] = useState(getUser());
     return (<main className="App">
-            {/* {user ?  */}
+            {user ? 
             <>
                 <NavBar user={user} setUser={setUser}/>
                 <Routes>
@@ -54,8 +54,8 @@ export default function App() {
                     {/* <Redirect to="/home" /> */}
                 </Routes>
             </> 
-            {/* : <AgeCheck />  */}
-            {/* : <AuthPage setUser={setUser}/> */}
-            {/* } */}
+            : <AgeCheck /> 
+            // : <AuthPage setUser={setUser}/>
+            }
         </main>);
 }
