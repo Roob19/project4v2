@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { signUp } from "../../utilities/services/users-service";
 import { Button, Form, Card } from 'react-bootstrap';
+import './SignUpForm.css';
 
 export default class SignUpForm extends Component {
     state = {

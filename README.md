@@ -1,9 +1,14 @@
-<center>project4</center>
+[project4](https://seir-project-04.herokuapp.com/)
+<br></br>
 <hr></hr>
 
 This project is solely intended for educational purposes and is created under fair use.
 
 <hr></hr>
+<br></br>
+
+<p>stuff n stuff</p>
+
 <br></br>
 Special thanks and graditude goes out to:
 <br></br>
@@ -32,3 +37,9 @@ Special thanks and graditude goes out to:
 <strong>[yelp-frontend](https://github.com/productioncoder/yelp-frontend) - Jan Goebel</strong>
 
 </center>
+
+<br></br>
+<br></br>
+<br></br>
+not sure if [this](https://youtu.be/qPJuzB8CL8o) counts as a "Rick Roll"
+<br></br>
