@@ -1,6 +1,13 @@
 import React from 'react';
 import { useState } from "react";
-import { Route, Routes, Switch, Redirect } from "react-router-dom";
+import {
+    Link,
+    Outlet,  
+    Route, 
+    Routes, 
+    Switch, 
+    Redirect, 
+} from "react-router-dom";
 import { getUser } from '../../utilities/services/users-service'; 
 
 import { barCrawlData } from '../../utilities/seeds/barCrawls';
@@ -27,9 +34,9 @@ export default function App() {
             <>
                 <NavBar user={user} setUser={setUser}/>
                 <Routes>
-                    {/* <Route path="/home">
+                    <Route path="*">
                         <HomePage user={user} setUser={setUser} />
-                    </Route> */}
+                    </Route>
                     <Route path="/BarCrawls">
                         <BusinessIndex business={barCrawlData} />
                     </Route>
@@ -54,8 +61,8 @@ export default function App() {
                     {/* <Redirect to="/home" /> */}
                 </Routes>
             </> 
-            // : <AgeCheck /> 
-            : <AuthPage setUser={setUser}/>
+            : <AgeCheck /> 
+            // : <AuthPage setUser={setUser}/>
             }
         </main>);
 }
