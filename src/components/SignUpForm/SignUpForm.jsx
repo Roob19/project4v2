@@ -57,7 +57,7 @@ export default class SignUpForm extends Component {
                                     required
                                     />
                                 </Form.Group>
-                                <Form.Group controlId="formBasicDOB">
+                                {/* <Form.Group controlId="formBasicDOB">
                                     <Form.Label>Date of Birth</Form.Label>
                                     <Form.Control 
                                     type="date"
@@ -67,7 +67,7 @@ export default class SignUpForm extends Component {
                                     placeholder="YYYY-MM-DD"
                                     required
                                     />
-                                </Form.Group>
+                                </Form.Group> */}
                                 <Form.Group controlId="formBasicEmail">
                                     <Form.Label>Email</Form.Label>
                                     <Form.Control

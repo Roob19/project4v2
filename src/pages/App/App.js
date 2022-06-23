@@ -35,9 +35,9 @@ export default function App() {
             <>
                 <NavBar user={user} setUser={setUser} />
                 <Routes>
-                    <Route path="*">
+                    {/* <Route path="*">
                         <HomePage user={user} setUser={setUser} />
-                    </Route>
+                    </Route> */}
                     <Route path="/BarCrawls">
                         <BusinessIndex business={barCrawlData} />
                     </Route>

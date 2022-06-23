@@ -3,7 +3,7 @@ import SignUpForm from '../../components/SignUpForm/SignUpForm';
 import LoginForm from '../../components/LoginForm/LoginForm';
 import './AuthPage.css';
 
-export default function AuthPage({setUser}, {date}, {country}) {
+export default function AuthPage({setUser, date, country}) {
     const [showLogin, setShowLogin] = useState(true);
 
     return (
@@ -11,10 +11,10 @@ export default function AuthPage({setUser}, {date}, {country}) {
             <h1>AuthPage</h1>
             { showLogin 
                 ? <LoginForm 
-                    setUser={setUser} 
-                    showLogin={showLogin} 
-                    setShowLogin={setShowLogin} 
-                /> 
+                        setUser={setUser} 
+                        showLogin={showLogin} 
+                        setShowLogin={setShowLogin} 
+                    /> 
                 : <SignUpForm 
                     setUser={setUser} 
                     date={date} 
@@ -23,6 +23,9 @@ export default function AuthPage({setUser}, {date}, {country}) {
                     setShowLogin={setShowLogin} 
                 /> 
             }
+            <button onClick={setShowLogin(false)}>
+                Sign Up
+            </button>
         </div>
     );
 }
