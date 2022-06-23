@@ -6,7 +6,8 @@ import './SignUpForm.css';
 export default class SignUpForm extends Component {
     state = {
         name: "",
-        dob: '',
+        dob: this.props.date,
+        country: this.props.country,
         email: "",
         password: "",
         confirm: "",

@@ -7,6 +7,7 @@ const SALT_ROUNDS = 9;  // 6 is a reasonable value
 const userSchema = new Schema({
         name: {type: String, required: true},
         dob: {type: Date, required: true}, 
+        country: {type: String, required: true},
         email: {
             type: String,
             unique: true,

@@ -3,18 +3,26 @@ import SignUpForm from '../../components/SignUpForm/SignUpForm';
 import LoginForm from '../../components/LoginForm/LoginForm';
 import './AuthPage.css';
 
-export default function AuthPage({setUser}) {
+export default function AuthPage({setUser}, {date}, {country}) {
     const [showLogin, setShowLogin] = useState(true);
 
     return (
-        <main>
+        <div>
             <h1>AuthPage</h1>
-            <button onClick={() => setShowLogin(!showLogin)}>{ showLogin ? 'Sign Up' : 'Log In' }</button>
-            
             { showLogin 
-                ? <LoginForm setUser={setUser} /> 
-                : <SignUpForm setUser={setUser} /> 
+                ? <LoginForm 
+                    setUser={setUser} 
+                    showLogin={showLogin} 
+                    setShowLogin={setShowLogin} 
+                /> 
+                : <SignUpForm 
+                    setUser={setUser} 
+                    date={date} 
+                    country={country} 
+                    showLogin={showLogin} 
+                    setShowLogin={setShowLogin} 
+                /> 
             }
-        </main>
+        </div>
     );
 }

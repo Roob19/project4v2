@@ -29,10 +29,11 @@ import './App.css';
 
 export default function App() {
     const [user, setUser] = useState(getUser());
+    
     return (<main className="App">
             {user ? 
             <>
-                <NavBar user={user} setUser={setUser}/>
+                <NavBar user={user} setUser={setUser} />
                 <Routes>
                     <Route path="*">
                         <HomePage user={user} setUser={setUser} />
