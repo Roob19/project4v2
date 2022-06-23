@@ -27,7 +27,7 @@ const getYelp = () => {
     axios
         .get(`${YELP_BIZ_URL}`, prep)
         .then((res) => {
-            console.log(res);
+            console.log("getYelp axios res= ", res);
             // console.log(res.data.businesses[0].name);
         });
 };
