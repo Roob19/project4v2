@@ -2,7 +2,7 @@ import { EventCard } from "../../components/EventCard/EventCard";
 
 const EventIndex = (props) => {
     return (
-        <main>
+        <div>
             <div className="events-container">
                 {props.map((event, idx) => {
                     return (
@@ -10,7 +10,7 @@ const EventIndex = (props) => {
                     )
                 })}
             </div>
-        </main>
+        </div>
     )
 }
 

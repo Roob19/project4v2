@@ -29,8 +29,8 @@ import './App.css';
 
 export default function App() {
     const [user, setUser] = useState(getUser());
-    
-    return (<main className="App">
+
+    return (<div className="App">
             {user ? 
             <>
                 <NavBar user={user} setUser={setUser} />
@@ -65,5 +65,5 @@ export default function App() {
             : <AgeCheck /> 
             // : <AuthPage setUser={setUser}/>
             }
-        </main>);
+        </div>);
 }

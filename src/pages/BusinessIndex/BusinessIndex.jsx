@@ -2,7 +2,7 @@ import { BusinessCard } from "../../components/BusinessCard/BusinessCard";
 
 const BusinessIndex = (props) => {
     return (
-        <main>
+        <div>
             <div className="businesses-container">
                 {props.map((biz, idx) => {
                     return (
@@ -10,7 +10,7 @@ const BusinessIndex = (props) => {
                     )
                 })}
             </div>
-        </main>
+        </div>
     )
 }
 
