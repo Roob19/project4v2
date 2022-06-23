@@ -28,14 +28,18 @@ export default function LogIn({setUser}) {
     return (
         <Card className="login-card">
             <div className="form-container" onSubmit={handleSubmit}>
-                <Form autoComplete="off">
+                <Form>
                     <Form.Group controlId="formBasicName">
                         <Form.Label>Email</Form.Label>
-                        <Form.Control type="text" name="email" value={credentials.email} onChange={handleChange} required/>
+                        <Form.Control 
+                        autoComplete="username"
+                        type="text" name="email" value={credentials.email} onChange={handleChange} required/>
                     </Form.Group>
                     <Form.Group controlId="formBasicPassword">
                         <Form.Label>Password</Form.Label>
-                        <Form.Control type="password" name="password" value={credentials.password} onChange={handleChange} required/>
+                        <Form.Control 
+                        autoComplete="current-password"
+                        type="password" name="password" value={credentials.password} onChange={handleChange} required/>
                     </Form.Group>
                     <Button type="submit">LOG IN</Button>
                 </Form>

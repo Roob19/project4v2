@@ -62,8 +62,7 @@ export default function App() {
                     {/* <Redirect to="/home" /> */}
                 </Routes>
             </> 
-            : <AgeCheck /> 
-            // : <AuthPage setUser={setUser}/>
+            : <AuthPage setUser={setUser}/>
             }
         </div>);
 }

@@ -6,8 +6,6 @@ import './SignUpForm.css';
 export default class SignUpForm extends Component {
     state = {
         name: "",
-        dob: this.props.date,
-        country: this.props.country,
         email: "",
         password: "",
         confirm: "",
@@ -46,7 +44,7 @@ export default class SignUpForm extends Component {
                             Sign Up
                         </Card.Header>
                         <Card.Body>
-                            <Form autoComplete="off" onSubmit={this.handleSubmit}>
+                            <Form onSubmit={this.handleSubmit}>
                                 <Form.Group controlId="formBasicName">
                                     <Form.Label>Name</Form.Label>
                                     <Form.Control
@@ -57,20 +55,10 @@ export default class SignUpForm extends Component {
                                     required
                                     />
                                 </Form.Group>
-                                {/* <Form.Group controlId="formBasicDOB">
-                                    <Form.Label>Date of Birth</Form.Label>
-                                    <Form.Control 
-                                    type="date"
-                                    name="dob"
-                                    value={this.state.dob}
-                                    onChange={this.handleChange}
-                                    placeholder="YYYY-MM-DD"
-                                    required
-                                    />
-                                </Form.Group> */}
                                 <Form.Group controlId="formBasicEmail">
                                     <Form.Label>Email</Form.Label>
                                     <Form.Control
+                                    autoComplete="username"
                                     type="email"
                                     name="email"
                                     value={this.state.email}
@@ -81,6 +69,7 @@ export default class SignUpForm extends Component {
                                 <Form.Group controlId="formBasicPassword">
                                     <Form.Label>Password</Form.Label>
                                     <Form.Control
+                                    autoComplete="new-password"
                                     type="password"
                                     name="password"
                                     value={this.state.password}
@@ -91,6 +80,7 @@ export default class SignUpForm extends Component {
                                 <Form.Group controlId="formBasicConfirm">
                                     <Form.Label>Confirm</Form.Label>
                                     <Form.Control
+                                    autoComplete="off"
                                     type="password"
                                     name="confirm"
                                     value={this.state.confirm}

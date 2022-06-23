@@ -9,6 +9,7 @@ module.exports = {
 };
 
 async function create(req, res) {
+    console.log(req.body);
     try {
         const user = await User.create(req.body);
         const token = createJWT(user);
