@@ -1,6 +1,6 @@
 import { getToken } from './users-service';
 
-const BASE_URL = process.env.REACT_APP_API_URL;
+const BASE_URL = process.env.REACT_APP_MONGO_URI;
 
 export function signUp(userData) {
     console.log("users-api signUp userData= ", userData);
