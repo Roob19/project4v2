@@ -1,6 +1,6 @@
 import sendRequest from "./send-request";
 
-const BASE_URL = '/api/business';
+const BASE_URL = 'http://localhost:3001/businesses';
 
 export function getAll() {
     return sendRequest(BASE_URL);

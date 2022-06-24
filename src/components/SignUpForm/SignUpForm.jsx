@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { signUp } from "../../utilities/services/users-service";
 import { Button, Form, Card } from 'react-bootstrap';
+import { useNavigate } from "react-router";
 import './SignUpForm.css';
 
 export default class SignUpForm extends Component {
@@ -28,6 +29,7 @@ export default class SignUpForm extends Component {
             delete formData.confirm;
             const user = await signUp(formData);
             this.props.setUser(user);
+            useNavigate('/');
             console.log("signup form handleSubmit user= ", user);
         } catch {
             this.setState({ error: "Sign Up Failed - Try Again" });

@@ -1,10 +1,10 @@
 import { getToken } from './users-service';
 
-const BASE_URL = '/api/users';
+const BASE_URL = 'http://localhost:3001/api/users';
 
 export function signUp(userData) {
     console.log("users-api signUp userData= ", userData);
-    return sendRequest('/api/users/', 'POST', userData);
+    return sendRequest(BASE_URL, 'POST', userData);
 }
 
 export function login(credentials) {

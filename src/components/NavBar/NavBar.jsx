@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from "react-router-dom";
 import * as userService from '../../utilities/services/users-service';
 
@@ -9,7 +10,7 @@ export default function NavBar(props) {
     }
 
     return (
-        <nav>
+        <div>
             <Link to="/BarCrawls">Bar Crawls</Link>
             &nbsp; | &nbsp;
             <Link to="/BottleShops">Bottle Shops</Link>
@@ -26,7 +27,7 @@ export default function NavBar(props) {
             &nbsp; | &nbsp;
             { props.user ? <span>Welcome {props.user.name}</span> : '' }
             &nbsp; | &nbsp;
-            <Link to="" onClick={ handleLogOut }>Logout</Link>
-        </nav>
+            <button onClick={ handleLogOut }>Logout</button>
+        </div>
     );
 }

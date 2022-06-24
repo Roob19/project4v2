@@ -8,6 +8,7 @@ import {
     Switch, 
     Redirect, 
 } from "react-router-dom";
+
 import { getUser } from '../../utilities/services/users-service'; 
 
 import { barCrawlData } from '../../utilities/seeds/barCrawls';
@@ -35,31 +36,14 @@ export default function App() {
             <>
                 <NavBar user={user} setUser={setUser} />
                 <Routes>
-                    {/* <Route path="*">
-                        <HomePage user={user} setUser={setUser} />
-                    </Route> */}
-                    <Route path="/BarCrawls">
-                        <BusinessIndex business={barCrawlData} />
-                    </Route>
-                    <Route path="/BottleShops">
-                        <BusinessIndex business={bottleShopData} />
-                    </Route>
-                    <Route path="/BeerBars">
-                        <BusinessIndex business={beerBarsData} />
-                    </Route>
-                    <Route path="/BeerGardens">
-                        <BusinessIndex business={beerGardensData} />
-                    </Route>
-                    <Route path="/BeerTours">
-                        <BusinessIndex business={beerToursData} />
-                    </Route>
-                    <Route path="/Events">
-                        <EventIndex event={eventsData} />
-                    </Route>
-                    <Route path="/HotNew">
-                        <BusinessIndex business={hotNewData} />
-                    </Route>
-                    {/* <Redirect to="/home" /> */}
+                    <Route path="/BarCrawls" element={<BusinessIndex business={barCrawlData} />} />
+                    <Route path="/BottleShops" element={<BusinessIndex business={bottleShopData} />} />
+                    <Route path="/BeerBars" element={<BusinessIndex business={beerBarsData} />} />
+                    <Route path="/BeerGardens" element={<BusinessIndex business={beerGardensData} />} />
+                    <Route path="/BeerTours" element={<BusinessIndex business={beerToursData} />} />
+                    <Route path="/Events" element={<EventIndex event={eventsData} />} />
+                    <Route path="/HotNew" element={<BusinessIndex business={hotNewData} />} />
+                    <Route path="/" element={<HomePage user={user} setUser={setUser} />} />
                 </Routes>
             </> 
             : <AuthPage setUser={setUser}/>

@@ -1,12 +1,12 @@
-const Garden = require('../../src/utilities/seeds/beerGardens');
+import beerGardensData from '../../src/utilities/seeds/beerGardens';
 
 async function index(req, res) {
-    const bizs = await Garden.find({}).exec();
+    const bizs = await beerGardensData.find({}).exec();
     res.json(bizs);
 }
 
 async function show(req, res) {
-    const biz = await Garden.findById(req.params.id);
+    const biz = await beerGardensData.findById(req.params.id);
     res.json(biz);
 }
 
