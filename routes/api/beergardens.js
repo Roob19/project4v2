@@ -2,8 +2,8 @@ const express = require('express');
 const router = express.Router();
 const beerGardenCtrl = require('../../controllers/api/beergardens');
 
-router.get('/', beerGardenCtrl.index);
+router.get('/beergarden', beerGardenCtrl.index);
 
-router.get('/:id', beerGardenCtrl.show);
+router.get('/beergarden/:id', beerGardenCtrl.show);
 
 module.exports = router;
