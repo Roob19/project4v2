@@ -26,7 +26,7 @@ app.use(require('./config/checkToken'));
 
 app.use('/api/users', require('./routes/api/users'));
 
-app.use('/BeerGardens', require('./routes/api/beergardens'));
+// app.use('/BeerGardens', require('./routes/api/beergardens'));
 
 // app.use('/business', ensureLoggedIn, require('./routes/api/businesses'));
 // app.use('/events', ensureLoggedIn, require('./routes/api/events'));
