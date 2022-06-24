@@ -36,13 +36,13 @@ export default function App() {
             <>
                 <NavBar user={user} setUser={setUser} />
                 <Routes>
-                    <Route path="/BarCrawls" element={<BusinessIndex business={barCrawlData} />} />
+                    {/* <Route path="/BarCrawls" element={<BusinessIndex business={barCrawlData} />} /> */}
                     <Route path="/BottleShops" element={<BusinessIndex business={bottleShopData} />} />
-                    <Route path="/BeerBars" element={<BusinessIndex business={beerBarsData} />} />
+                    {/* <Route path="/BeerBars" element={<BusinessIndex business={beerBarsData} />} /> */}
                     <Route path="/BeerGardens" element={<BusinessIndex business={beerGardensData} />} />
-                    <Route path="/BeerTours" element={<BusinessIndex business={beerToursData} />} />
-                    <Route path="/Events" element={<EventIndex event={eventsData} />} />
-                    <Route path="/HotNew" element={<BusinessIndex business={hotNewData} />} />
+                    {/* <Route path="/BeerTours" element={<BusinessIndex business={beerToursData} />} /> */}
+                    {/* <Route path="/Events" element={<EventIndex event={eventsData} />} /> */}
+                    {/* <Route path="/HotNew" element={<BusinessIndex business={hotNewData} />} /> */}
                     <Route path="/" element={<HomePage user={user} setUser={setUser} />} />
                 </Routes>
             </> 

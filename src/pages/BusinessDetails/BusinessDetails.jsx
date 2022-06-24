@@ -17,7 +17,7 @@ const BusinessDetails = ({business}) => {
                 </a> 
                 </span> Page
             </p>
-            {business.transactions ? <p>{business.transactions} Available</p> : ""}
+            {business.transactions ? <p>{business.transactions} Available </p> : ""}
         </div>
     )
 }
